@@ -25,7 +25,7 @@ describe('Trie', () => {
     expect(newTrie.root.children.d.children.a.children.v.children.e.isCompleteWord).to.equal(true)
   });
 
-  it.only('Should have a count method that returns the total number of words in the trie', () => {
+  it('Should have a count method that returns the total number of words in the trie', () => {
     expect(newTrie.wordCount).to.equal(0)
 
     newTrie.insert('Dave')

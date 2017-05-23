@@ -13,15 +13,20 @@ describe('Node', () => {
     expect(newNode).to.be.instanceof(Node)
   });
 
-  it('The Node\'s letter property should be null by default', () => {
+  it('Should have a letter property of null by default', () => {
     expect(newNode.letter).to.equal(null)
   });
 
-  it('The Node\'s children property should be an empty object by default', () => {
+  it('Should be able to assign a letter to the letter property', () => {
+    let myNewNode = new Node('a')
+    expect(myNewNode.letter).to.equal('a')
+  });
+
+  it('Should have a children property with a default value of an empty object', () => {
     expect(newNode.children).to.deep.equal({})
   });
 
-  it('The Node\'s isCompleteWord property should be false by default', () => {
+  it('Should have an isCompleteWord property with the default value of false', () => {
     expect(newNode.isCompleteWord).to.equal(false)
   });
 
