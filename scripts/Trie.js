@@ -1,5 +1,4 @@
 import Node from './Node.js'
-import pry from 'pryjs'
 
 class Trie {
   constructor() {
