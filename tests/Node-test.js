@@ -5,9 +5,9 @@ describe('Node', () => {
 
   let newNode;
 
-  beforeEach( () => {
+  beforeEach(() => {
     newNode = new Node();
-  } )
+  });
 
   it('Should be an instance of Node', () => {
     expect(newNode).to.be.instanceof(Node)
@@ -19,6 +19,7 @@ describe('Node', () => {
 
   it('Should be able to assign a letter to the letter property', () => {
     let myNewNode = new Node('a')
+
     expect(myNewNode.letter).to.equal('a')
   });
 
@@ -29,6 +30,5 @@ describe('Node', () => {
   it('Should have an isCompleteWord property with the default value of false', () => {
     expect(newNode.isCompleteWord).to.equal(false)
   });
-
 
 });
