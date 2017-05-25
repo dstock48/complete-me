@@ -47,11 +47,18 @@ class Trie {
       }
     })
 
+    if (suggestions.length === 0) {
+      return 'Not Found'
+    }
+
     return suggestions
   }
 
 
   findWords(node, prefix = [], wordCompletions = []) {
+    if (node === undefined) {
+      return []
+    }
 
     if (node.isCompleteWord) { //  if this node is the last node in a word
       wordCompletions.push(prefix.join(''))  //  join the letter(s) in the prefix array and push them into the completions array

@@ -48,6 +48,15 @@ describe('Trie', () => {
     expect(newTrie.suggest('sar')).to.deep.equal(['sara'])
   });
 
+  it('Should return an error if the search string is not found', () => {
+    newTrie.insert('Dave');
+    newTrie.insert('Sara');
+    newTrie.insert('Jesse')
+    newTrie.insert('Sam');
+
+    expect(newTrie.suggest('z')).to.equal('Not Found')
+  });
+
   it('Should have a populate method fills the trie with all the words in the dictionary', () => {
     newTrie.populate(dictionary)
     expect(newTrie.count()).to.equal(235886)
